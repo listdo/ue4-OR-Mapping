@@ -1,10 +1,17 @@
 package swt6.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
+@Entity
 public class Project implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @Id
   private Long     id;
   private String   name;
   
@@ -12,8 +19,7 @@ public class Project implements Serializable {
     return id;
   }
 
-  public Project() {  
-  }
+  public Project() { }
   
   public Project(String name) {
     this.name = name;  

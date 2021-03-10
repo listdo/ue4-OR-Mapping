@@ -24,7 +24,9 @@ public class Employee implements Serializable {
     @AttributeOverride(name="zipCode", column = @Column(name="address_zipCode"))
     @AttributeOverride(name="city", column = @Column(name="address_city"))
     @AttributeOverride(name="street", column = @Column(name="address_street"))
-    @OneToOne
+
+    @ManyToOne
+    // multiple people could live in the same house and work in the same company
     private Address address;
 
     @org.hibernate.annotations.Fetch(FetchMode.SELECT)
@@ -35,6 +37,19 @@ public class Employee implements Serializable {
     @CollectionTable(name = "EMPL_PHONES", joinColumns = @JoinColumn(name="EMPL_ID"))
     @Column(name = "PHONE_NR")
     private Set<String> phones = new HashSet<>();
+
+    @OneToMany
+    private Set<Issue> issues = new HashSet<>();
+
+    public Set<Issue> getIssues() { return issues; }
+    public void setIssues(Set<Issue> issues) { this.issues = issues; }
+    public void addIssue(Issue... issue)
+    {
+        for (Issue item : issue)
+        {
+            this.issues.add(item);
+        }
+    }
 
     public void addPhnoes(String phnoe)
     {

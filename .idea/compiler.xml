@@ -14,4 +14,13 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="swt6.ue4.console" options="" />
+      <module name="swt6.ue4.domain" options="" />
+      <module name="swt6.ue4.integration" options="" />
+      <module name="swt6.ue4.logic" options="" />
+      <module name="swt6.ue4.repository" options="" />
+    </option>
+  </component>
 </project>
