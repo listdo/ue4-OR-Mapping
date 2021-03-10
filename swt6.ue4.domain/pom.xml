@@ -3,13 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>ue4-or-mapping</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>swt6.ue4</groupId>
+        <artifactId>project</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>swt6.ue4.domain</artifactId>
+    <groupId>swt6.ue4</groupId>
+    <artifactId>domain</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
@@ -50,5 +53,4 @@
             <version>2.0.1.Final</version>
         </dependency>
     </dependencies>
-
 </project>

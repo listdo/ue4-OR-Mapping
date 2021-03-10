@@ -18,9 +18,11 @@ public class Issue {
     @ManyToOne
     private IssuePriority priority;
 
+    private Duration processingTime;
+
     @Min(0)
     @Max(100)
-    private Duration processingTime;
+    private int progress;
 
     @ManyToOne
     private Project project;
@@ -37,6 +39,14 @@ public class Issue {
 
     public IssueStatus getStatus() {
         return status;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public void setProgress(int progress) {
+        this.progress = progress;
     }
 
     public void setStatus(IssueStatus status) {
