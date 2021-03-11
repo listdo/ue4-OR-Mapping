@@ -8,6 +8,7 @@
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>swt6.ue4.domain</module>
         <module>swt6.ue4.repository</module>

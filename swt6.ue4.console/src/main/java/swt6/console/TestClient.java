@@ -15,6 +15,8 @@ public class TestClient {
         empl.setLastName("test");
         empl.setDateOfBirth(LocalDate.of(2020,1,1));
 
+        System.out.println("Test");
+
         employeeLogic.createEmployee(empl);
     }
 }
